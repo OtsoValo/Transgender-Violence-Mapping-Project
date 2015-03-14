@@ -4,7 +4,7 @@ var jade = require('jade');
 var app = express();
 
 /* set views */
-app.set('views', './views');
+app.set('views', 'views');
 app.set('view engine', 'jade');
 
 /* serve assets */
