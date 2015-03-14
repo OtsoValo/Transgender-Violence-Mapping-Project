@@ -1,11 +1,17 @@
 {
   "name": "TransViolenceMap",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Status The TVMP is currently in the early phase of development. We are currently focussed on entering data to the database and developing the web application where the data will be available.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Jeanine Otter",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express-subdomain": "~1.0.3",
+    "jade": "~1.9.2"
+  },
+  "devDependencies": {}
 }
