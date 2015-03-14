@@ -1,0 +1,71 @@
+var transViolencegeoJ= {
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.600612,
+                    39.321776
+                ]
+            },
+            "properties": {
+                "ID": "1",
+                "Last_Name": "Hall",
+                "First_Name": "Kandy",
+                "Alternate_Names": "",
+                "Date_of_Incident": "06-03-1999",
+                "Incident_Address": "1400 Fillmore Avenue",
+                "Incident_City": "Baltimore",
+                "Incident_State": "Maryland",
+                "Incident_Zip": "21218",
+                "Incident_Country": "USA",
+                "Age": "40",
+                "Person_of_Color": "Yes",
+                "Gender": "Woman",
+                "Local_News_Report_Link": "",
+                "Gender_in_Local_News": "",
+                "Dead_Name": "",
+                "Police_Report_Link": "",
+                "Cause_of_Death": "Trauma (Beaten)",
+                "Hate_Crime": "",
+                "Solved": "",
+                "Resource_Links": "http://www.advocate.com/politics/transgender/2014/06/04/trans-woman-found-murdered-baltimore"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.889842,
+                    33.842423
+                ]
+            },
+            "properties": {
+                "ID": "2",
+                "Last_Name": "Reyes",
+                "First_Name": "Zoraida",
+                "Alternate_Names": "",
+                "Date_of_Incident": "06-12-2013",
+                "Incident_Address": "200 N. State College Drive",
+                "Incident_City": "Anaheim",
+                "Incident_State": "California",
+                "Incident_Zip": "92806",
+                "Incident_Country": "USA",
+                "Age": "28",
+                "Person_of_Color": "Yes",
+                "Gender": "Woman",
+                "Local_News_Report_Link": "",
+                "Gender_in_Local_News": "",
+                "Dead_Name": "",
+                "Police_Report_Link": "",
+                "Cause_of_Death": "Choking",
+                "Hate_Crime": "",
+                "Solved": "",
+                "Resource_Links": "http://blogs.ocweekly.com/navelgazing/2014/10/randy_lee_parkerson_zoraida_reyes.php"
+            }
+        }
+    ]
+}

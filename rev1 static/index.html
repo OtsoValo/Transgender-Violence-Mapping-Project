@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trans Violence Map</title>
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style-mobile.css">
+
+		<!-- Leaflet -->
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+	<!-- Favicon -->
+	<link rel="icon" 
+      type="image/gif" 
+      href="http://fc06.deviantart.net/fs71/f/2012/191/2/e/2e4a84f430c74872f254b2523a163951-d56rwal.gif">
+
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+	<div class="navPart" id="logo">
+		Transgender Violence Mapping Project: <span class="navMapName">Trans Women Murder Map</span>
+	</div>
+	<div class="navPart" id="navLinks">
+		<ul>
+			<li>
+				<a href="">Commemmerate</a>
+			</li>
+			<li>
+				<a href="">Get The Data</a>
+			</li>
+			<li>
+				<a href="">About</a>
+			</li>
+			<li>
+				<a href="">Share</a>
+			</li>
+			<li>
+				<a href="">Report a Murder</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<!-- Map and Sidebar -->
+<section class="mapAndSidebar">
+
+<!-- Sidebar -->
+	<div class="mapSidebar">
+	<div id="mapSidebarContent">
+		
+		<!-- First Section -->
+		<section class="">
+		
+			<!-- Year Filter -->
+			<div id="yearFilter" class="twoColFilter">
+			
+				<!-- Filter -->
+				<div class="leftFilter">
+					<label class="yearLabel">Year:</label><br>
+					<select class="yearSelect"id="year" name="year">
+					  <script>
+					  var myDate = new Date();
+					  var year = myDate.getFullYear();
+					  for (var i = year; i >= 1950; i--) {
+					  	document.write('<option value="'+i+'">'+i+'</option>');
+					  }
+					  </script>
+					</select>
+				</div>
+
+				<!-- Number -->
+				<span class="bigNumber">9</span>
+				<span class="bigNumberLabel">murders</span>
+
+			</div>
+			<!-- /yearFilter -->
+
+		</section>
+		<!-- /section -->
+
+		<!-- Second Section -->
+		<section>
+			<h3>Demographics</h3>
+
+				<!-- Person of Color -->
+				<!-- Age -->
+				<!--  -->
+				
+		</section>
+		<!-- /section -->
+
+		<!-- Third Section -->
+		<section>
+			<h3>Geographies</h3>
+
+				<!-- Person of Color -->
+				<!-- Age -->
+				<!--  -->
+		</section>
+		<!-- /section -->
+
+		<!-- Fourth Section -->
+		<section>
+			<h3>Media Response</h3>
+
+				<!-- Person of Color -->
+				<!-- Age -->
+				<!--  -->
+		</section>
+		<!-- /section -->
+
+
+	</div> <!-- /mapSidebarContent -->
+	</div> <!-- /mapSidebar -->
+
+<!-- Sidebar hide/show button appears between 575px and 900px -->
+<div class="hideShowButton">
+</div>
+
+<div id="mobile-hideShowButton">
+	<script type="text/javascript">
+		document.
+	</script>
+</div>
+
+
+<!-- Map -->
+<div id="map"></div>
+
+</section>
+<!-- /mapAndSidebar -->
+
+
+
+
+
+
+<!-- Scripts Needed -->
+
+<!-- Data -->
+<script src="data/TWOCMap.json"></script>
+
+<!-- Leaflet -->
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+<!-- Stamen -->
+<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+
+
+<!-- Init Map -->
+<script>
+
+	// Map Resources
+	var Candle = L.Icon.extend({
+    options: {
+        iconSize:     [38, 45],
+        shadowSize:   [0, 0],
+        iconAnchor:   [19, 38],
+        shadowAnchor: [4, 62],
+        popupAnchor:  [-2,-42]
+	}
+	});
+
+	var bigFlame = new Candle(({iconUrl: 'http://fc06.deviantart.net/fs71/f/2012/191/2/e/2e4a84f430c74872f254b2523a163951-d56rwal.gif'}));
+
+
+	// Sidebar button
+	
+	// replace "toner" here with "terrain" or "watercolor"
+	var layer = new L.StamenTileLayer("toner");
+	var map = new L.Map("map", {
+	    center: new L.LatLng(39.5, -98.35),
+	    zoom: 4,
+	    zoomControl: false
+	});
+	map.addLayer(layer);
+
+	var transViolenceData = L.geoJson(transViolencegeoJ,{
+				// Layer
+				pointToLayer: function(feature, latlng) {
+        			return new L.Marker(latlng, {icon: bigFlame});
+    			},
+				// Popups
+				 onEachFeature: function (feature, layer) {
+       				layer.bindPopup(
+       						feature.properties.First_Name + " " +
+       						feature.properties.Last_Name + "<br>" +
+       						"Date: " + feature.properties.Date_of_Incident + "<br>" +
+       						"Address: " + feature.properties.Incident_Address + ", " + feature.properties.Incident_City + ", " + feature.properties.Incident_State + "  " + feature.properties.Incident_Zip + " " + feature.properties.Incident_Country
+       					);}
+				});
+			transViolenceData.addTo(map);
+
+</script>
+
+</body>
+</html>

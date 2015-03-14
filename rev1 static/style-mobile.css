@@ -1,0 +1,57 @@
+/* Mid Screen Size */
+
+@media (max-width: 1150px) {
+	#logo {
+		margin-top: 15px;
+	}
+}
+
+@media (max-width: 450px) {
+
+	/* Nav */
+	nav {
+		padding: 0 2%;
+		width: 96%;
+	}
+
+		#logo {
+		margin-top: 13px;
+	}
+
+	#navLinks {
+		max-width: 450px;
+	}
+
+	/* Sidebar */
+
+	.mapAndSidebar {
+		height: 800px;
+		width: 100%;
+		position: relative;
+	}
+
+		.mapSidebar {
+			max-width: 100%;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 400px;
+		}
+		#map {
+			left: 0;
+			right: 0;
+			top: 400px;
+			height: 400px;
+		}
+
+		/* Mobile Hide Show Button*/
+		#mobile-hideShowButton {
+			position: absolute;
+			top: 400px;
+			left: 0;
+			width: 40px;
+			height: 40px;
+			background-color: #1F1F1F;
+			z-index: 99;
+		}
+}

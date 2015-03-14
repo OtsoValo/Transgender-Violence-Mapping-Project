@@ -1,0 +1,174 @@
+body {
+	margin: 0 auto;
+	font-family: helvetica neue;
+	color: #FAFAFA;
+}
+
+/* Nav */
+nav {
+	width: 96%;
+	padding: 7px 2%;
+	z-index: 98;
+	background-color: #FAFAFA;
+	color: black;
+	border-bottom: 1px solid #1F1F1F;
+}
+
+	.navPart {
+		display: inline-block;
+	}
+
+	#logo {
+		font-size: 1.35em;
+		font-weight: 600;
+	}
+
+	.navMapName {
+		font-weight: 300;
+	}
+
+	#navLinks {
+	}
+		#navLinks ul {
+			list-style-type: none;
+			text-align: right;
+		}
+		#navLinks ul li {
+			display: inline;
+			margin-left: 20px;
+		}
+		#navLinks ul li a {
+			text-decoration: none;
+			color: black;
+			font-weight: 500;
+			font-size: .9em;
+			color: black;
+		}
+		#navLinks ul li a:hover {
+			color: #BF2113;
+		}
+
+/* Map and Sidebar */
+.mapAndSidebar {
+	position: relative;
+	height: 550px;
+	z-index: 3;
+}
+
+	/* Hide Show Button */
+	/*@media (max-width: 900px) {
+  		.hideShowButton {
+			height: 80px;
+			width: 80px;
+			background-color: red;
+			position: absolute;
+			top: 20px;
+			left: 470px;
+			z-index: 99;
+			animate: ease 1s;
+		}
+
+	}*/
+
+	/* Sidebar */
+	.mapSidebar {
+		width: 100%;
+		max-width: 400px;
+		height: 100%;
+		display: inline-block;
+		background-color: #1F1F1F;
+		position: absolute;
+		  top: 0;
+		  left: 0;
+		  bottom: 0;
+		overflow: auto;
+	}
+
+		/* Sidebar Formatting */
+		#mapSidebarContent section {
+			padding: 15px 25px;
+		}
+
+			.darkerGreyBg {
+				background-color: #242424;
+				color: #B8B8B8;
+			}
+
+		.yearLabel {
+			font-size: .9em;
+		}
+
+		.yearSelect {
+		   width: 120px;
+		   padding: 5px;
+		   font-size: 1.7em;
+		   line-height: 1;
+		   border: 0;
+		   border-radius: 0;
+		   height: 40px;
+		   margin-top: 5px;		}
+
+			/* Big Filter */
+			.twoColFilter {
+				float: none;
+				text-align: right;
+				width: 100%;
+				margin-top: 15px;
+				margin-bottom: -10px;
+
+			}
+
+			.leftFilter {
+				text-align: left;
+				float: left;
+				width: 120px;
+			}
+
+			/* Year Filter */
+
+			.bigNumber {
+				line-height: 1em;
+				font-size: 4.5em;
+				font-weight: 600;
+				letter-spacing: 1px;
+				color: #BF2113;
+			}
+
+			.bigNumberLabel {
+				font-size: .9em;
+			}
+
+		/* Sidebar Section Titles*/
+
+		#mapSidebarContent h3 {
+			border-top: 1px solid white;
+			padding-top: 10px;
+		}
+
+	#map {
+		display: inline-block;
+		background-color: black;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		height: 100%;
+		left: 400px;
+		right: 0;
+
+
+	}
+
+	/* Mobile Hide Show Button*/
+	#mobile-hideShowButton {
+		display: hidden;
+	}
+
+/* Leaflet */
+
+.leaflet-popup-content {
+	color: black;
+	max-width: 250px;
+}
+
+/* Placeholder */
+
